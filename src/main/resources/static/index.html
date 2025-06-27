@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English-Chinese Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-en">English</span>
+                <span class="title-divider">⇄</span>
+                <span class="title-zh">中文</span>
+            </h1>
+            <p class="subtitle">Intelligent Dictionary with Auto-Detection</p>
+        </header>
+
+        <main class="main">
+            <div class="search-container">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Enter English or Chinese text..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button id="clearBtn" class="clear-btn" style="display: none;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="language-indicator" id="languageIndicator" style="display: none;">
+                    <span id="detectedLanguage"></span>
+                </div>
+            </div>
+
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="result-input">
+                            <span class="result-label">Input:</span>
+                            <span id="resultInput" class="result-text"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-divider"></div>
+                    
+                    <div class="result-output">
+                        <span class="result-label">Translation:</span>
+                        <span id="resultOutput" class="result-text result-translation"></span>
+                    </div>
+                    
+                    <div class="result-source" id="resultSource">
+                        <span class="source-badge" id="sourceBadge"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <span>Translating...</span>
+            </div>
+
+            <div class="error-container" id="errorContainer" style="display: none;">
+                <div class="error-card">
+                    <div class="error-icon">⚠️</div>
+                    <div class="error-message" id="errorMessage"></div>
+                    <button class="error-retry" id="errorRetry">Try Again</button>
+                </div>
+            </div>
+
+            <div class="examples">
+                <h3 class="examples-title">Try these examples:</h3>
+                <div class="example-tags">
+                    <button class="example-tag" data-word="hello">hello</button>
+                    <button class="example-tag" data-word="test">test</button>
+                    <button class="example-tag" data-word="你好">你好</button>
+                    <button class="example-tag" data-word="测试">测试</button>
+                    <button class="example-tag" data-word="computer">computer</button>
+                    <button class="example-tag" data-word="学习">学习</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by Local Database + Baidu Translate API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

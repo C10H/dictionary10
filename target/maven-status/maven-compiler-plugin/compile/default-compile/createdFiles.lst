@@ -1,0 +1,7 @@
+com/dictionary/DictionaryApplication.class
+com/dictionary/service/BaiduTranslateService.class
+com/dictionary/controller/DictionaryController.class
+com/dictionary/entity/Vocabulary.class
+com/dictionary/service/LanguageDetectionService.class
+com/dictionary/repository/VocabularyRepository.class
+com/dictionary/service/DictionaryService.class

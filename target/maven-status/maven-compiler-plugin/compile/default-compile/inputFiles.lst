@@ -1,0 +1,7 @@
+/home/a24/dictionary10/src/main/java/com/dictionary/entity/Vocabulary.java
+/home/a24/dictionary10/src/main/java/com/dictionary/DictionaryApplication.java
+/home/a24/dictionary10/src/main/java/com/dictionary/repository/VocabularyRepository.java
+/home/a24/dictionary10/src/main/java/com/dictionary/service/DictionaryService.java
+/home/a24/dictionary10/src/main/java/com/dictionary/service/LanguageDetectionService.java
+/home/a24/dictionary10/src/main/java/com/dictionary/controller/DictionaryController.java
+/home/a24/dictionary10/src/main/java/com/dictionary/service/BaiduTranslateService.java
